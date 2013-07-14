@@ -165,8 +165,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CraftShowsController.cs" />
     <Compile Include="Controllers\HomeCarouselController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -321,6 +323,16 @@
     <Content Include="Views\HomeCarousel\Create.cshtml" />
     <Content Include="Views\HomeCarousel\Edit.cshtml" />
     <Content Include="Views\HomeCarousel\Delete.cshtml" />
+    <Content Include="Views\CraftShows\Index.cshtml" />
+    <Content Include="Views\CraftShows\Details.cshtml" />
+    <Content Include="Views\CraftShows\Create.cshtml" />
+    <Content Include="Views\CraftShows\Edit.cshtml" />
+    <Content Include="Views\CraftShows\Delete.cshtml" />
+    <Content Include="Views\Location\Index.cshtml" />
+    <Content Include="Views\Location\Details.cshtml" />
+    <Content Include="Views\Location\Create.cshtml" />
+    <Content Include="Views\Location\Edit.cshtml" />
+    <Content Include="Views\Location\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
