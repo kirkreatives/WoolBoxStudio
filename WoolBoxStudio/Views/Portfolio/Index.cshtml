@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WoolBoxStudio.Models.Portfolio>
+
+@{
+    ViewBag.Title = "Portfolio Admin";
+}
+@Html.Partial("_AdminMenu")
+<h2>Portfolio Items</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageLink)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageLink)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PortfolioID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PortfolioID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PortfolioID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,40 @@
+﻿@model WoolBoxStudio.Models.LoginModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+</hgroup>
+
+<section id="loginForm">
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <p>
+        @Html.LabelFor(m => m.UserName):
+    </p>
+    <p>
+        @Html.TextBoxFor(m => m.UserName)
+        @Html.ValidationMessageFor(m => m.UserName)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Password):
+    </p>
+    <p>
+        @Html.PasswordFor(m => m.Password)
+        @Html.ValidationMessageFor(m => m.Password)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+        @Html.CheckBoxFor(m => m.RememberMe)
+    </p>
+    <input type="submit" value="Log in" />
+}
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

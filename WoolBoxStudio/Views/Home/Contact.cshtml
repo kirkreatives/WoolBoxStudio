@@ -1,0 +1,44 @@
+﻿@model WoolBoxStudio.Models.EmailForm
+
+@{
+    ViewBag.Title = "Contact";
+}
+<div id="contactSection">
+    <h2>Contact Me</h2>
+    <p>
+        If you want to order a custom made product or just say hello fill out this form below and I'll get back to you.
+    </p>
+    @using (Html.BeginForm("Contact", "Home")) //send data to controller (Method name, Controller name)
+    {
+        @Html.ValidationSummary(true)
+        <p>
+            @Html.LabelFor(model => model.Name)
+        </p>
+        <p>
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Email)
+        </p>
+        <p>
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Subject)
+        </p>
+        <p>
+            @Html.EditorFor(model => model.Subject)
+            @Html.ValidationMessageFor(model => model.Subject)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Message)
+        </p>
+        <p>
+            @Html.EditorFor(model => model.Message)
+            @Html.ValidationMessageFor(model => model.Message)
+        </p>
+        <input type="submit" value="Send" />
+    }
+</div>

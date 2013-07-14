@@ -1,0 +1,29 @@
+﻿@model WoolBoxStudio.Models.Portfolio
+
+@{
+    ViewBag.Title = "Portfolio Item Details";
+}
+@Html.Partial("_AdminMenu")
+<h2>Portfolio Item Details</h2>
+<p>
+    @Html.DisplayNameFor(model => model.Category.Name):
+    @Html.DisplayFor(model => model.Category.Name)
+</p>
+<p>
+    @Html.DisplayNameFor(model => model.Title):
+    @Html.DisplayFor(model => model.Title)
+</p>
+<p>
+    @Html.DisplayNameFor(model => model.Description):
+    @Html.DisplayFor(model => model.Description)
+</p>
+<p>
+    @Html.DisplayNameFor(model => model.ImageLink):
+</p>
+<p>
+    <img src="../@Model.ImageLink" alt="@Model.Title" class="adminDetails"/>
+</p>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PortfolioID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

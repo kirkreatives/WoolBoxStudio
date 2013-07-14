@@ -1,0 +1,21 @@
+﻿@model WoolBoxStudio.Models.HomeCarousel
+
+@{
+    ViewBag.Title = "Image Carousel Details";
+}
+@Html.Partial("_AdminMenu")
+
+<h2>Image Carousel Details</h2>
+
+<p>
+    @Html.DisplayNameFor(model =>model.Description):
+    @Html.DisplayFor(model => model.Description)
+</p>
+
+<p>
+    @Html.DisplayNameFor(model => model.ImageLink):
+</p>
+
+<p>
+    <img src="../@Model.ImageLink" alt="Model.Title" class="adminDetails" />
+</p>

@@ -1,0 +1,28 @@
+﻿@model WoolBoxStudio.Models.HomeCarousel
+
+@{
+    ViewBag.Title = "Delete Carousel Item";
+}
+@Html.Partial("_AdminMenu")
+
+<h2>Delete Image Carousel Item</h2>
+<h3>Are you sure you want to delete this?</h3>
+
+
+<p>
+    @Html.DisplayNameFor(model => model.Description)
+    @Html.DisplayFor(model => model.Description);
+</p>
+
+<p>
+    @Html.DisplayNameFor(model => model.ImageLink)
+    @Html.DisplayFor(model => model.ImageLink);
+</p>
+
+@using (Html.BeginForm()) { 
+    <p>
+        <input type="submit" value="Delete" />
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+}

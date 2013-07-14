@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/flexslider.css")
+        @Scripts.Render("~/bundles/modernizr")
+
+    </head>
+    <body>
+        <header>
+            <div id="headerContent">
+                <img src="~/Content/Images/WoolBoxLogo.png" alt="Wool Box Logo" />
+                <h1>@Html.ActionLink("Wool Box Studio", "Index", "Home")</h1>
+                    <div id="socialMedia">
+                        <a href="https://www.facebook.com/woolboxstudio" target="_blank"><img src="~/Content/Images/facebookLogo.png" alt="Facebook Logo" /></a>
+                        <a href="http://pinterest.com/stephsims/" target="_blank"><img src="~/Content/Images/pinterestLogo.png" alt="Facebook Logo" /></a>
+                    </div>
+                    <div id="loginInfo">
+                        @Html.Partial("_LoginPartial")
+                    </div>
+
+            </div>
+        </header>
+        <nav id="mainNav">
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Portfolio", "Portfolio", "Home")</li>
+                <li><a href="javascript:void(0)">Shop</a>
+                    <ul>
+                        <li><a href="http://www.etsy.com/shop/WoolBoxStudioStore" target="_blank">Etsy</a></li>
+                        <li><a href="http://www.spoonflower.com/profiles/woolboxstudio?sub_action=designs" target="_blank">Spoonflower</a></li>
+                        <li><a href="http://www.zazzle.com/woolboxstudioink" target="_blank">Zazzle</a></li>
+                        <li><a href="http://www.cafepress.com/woolboxstudioink" target="_blank">Cafe Press</a></li>
+                    </ul>
+                </li>
+                <li>@Html.ActionLink("Craft Shows", "CraftShows", "Home")</li>
+                <li>@Html.ActionLink("Locations", "Locations", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                @if (User.IsInRole("Administrator"))
+                {
+                    <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                }
+                
+            </ul>
+        </nav>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            @RenderBody()
+        </div>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Wool Box Studio</p>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

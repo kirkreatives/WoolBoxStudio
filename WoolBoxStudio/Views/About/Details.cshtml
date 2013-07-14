@@ -1,0 +1,18 @@
+﻿@model WoolBoxStudio.Models.About
+
+@{
+    ViewBag.Title = "About Item Details";
+}
+@Html.Partial("_AdminMenu")
+<h2>About Item Details</h2>
+
+<p>
+    @Html.DisplayNameFor(model => model.AboutMe): @Html.DisplayFor(model => model.AboutMe)
+</p>
+<p>
+    @Html.DisplayNameFor(model => model.ImageLink): @Html.DisplayFor(model => model.ImageLink)
+</p>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.AboutID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

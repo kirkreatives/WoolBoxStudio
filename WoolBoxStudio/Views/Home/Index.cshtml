@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WoolBoxStudio.Models.HomeCarousel>
+
+@{
+    ViewBag.Title = "Wool Box Studio";
+    
+}
+<div class="flexslider">
+  <ul class="slides">
+    @foreach (var item in Model) {
+        <li>
+            <img src="@item.ImageLink" alt="Home Carousel" />
+            <p class="flex-caption">@item.Description</p>
+        </li>
+    }
+  </ul>
+</div>
+
+<div id="modules">
+    <div class="module">
+	    <div class="innerModule">
+            <img src="~/Content/Images/Blurb.png" alt="Bullet Point" />
+            <h2>Handmade</h2>
+            <p>Nulla non tempus lectus. Donec a condimentum tortor. In ultricies mollis ipsum, id imperdiet erat sagittis at. Integer vulputate venenatis congue. 
+                Quisque venenatis ante libero, eget pharetra nunc eleifend ac. Curabitur ac vulputate magna, quis mattis nisi. Aliquam facilisis rutrum rhoncus. 
+                Pellentesque at dui nec velit aliquet porta et porttitor est
+            </p>
+	    </div>
+    </div>
+    <div class="module">
+	    <div class="innerModule">
+            <img src="~/Content/Images/Blurb.png" alt="Bullet Point" />
+            <h2>Unique</h2>
+            <p>Nulla non tempus lectus. Donec a condimentum tortor. In ultricies mollis ipsum, id imperdiet erat sagittis at. Integer vulputate venenatis congue. 
+                Quisque venenatis ante libero, eget pharetra nunc eleifend ac. Curabitur ac vulputate magna, quis mattis nisi. Aliquam facilisis rutrum rhoncus. 
+                Pellentesque at dui nec velit aliquet porta et porttitor est
+            </p>
+	    </div>
+    </div>
+    <div class="module">
+	    <div class="innerModule">
+            <img src="~/Content/Images/Blurb.png" alt="Bullet Point" />
+            <h2>Personal</h2>
+            <p>Nulla non tempus lectus. Donec a condimentum tortor. In ultricies mollis ipsum, id imperdiet erat sagittis at. Integer vulputate venenatis congue. 
+                Quisque venenatis ante libero, eget pharetra nunc eleifend ac. Curabitur ac vulputate magna, quis mattis nisi. Aliquam facilisis rutrum rhoncus. 
+                Pellentesque at dui nec velit aliquet porta et porttitor est
+            </p>
+	    </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/jquery.flexslider-min.js" ></script>   
+    <script type="text/javascript">
+        $(function () {
+            $('.flexslider').flexslider({
+                slideshow: true,
+                slideshowSpeed: 5000,
+                animationSpeed: 600,
+                animationLoop: true
+            });
+        });
+    </script>
+}

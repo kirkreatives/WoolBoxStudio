@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WoolBoxStudio.Models.About>
+
+@{
+    ViewBag.Title = "About Me Admin";
+}
+@Html.Partial("_AdminMenu")
+<h2>Index</h2>
+<p>Note: only the first entry will be displayed on the website.</p>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AboutMe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageLink)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AboutMe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageLink)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AboutID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AboutID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AboutID })
+        </td>
+    </tr>
+}
+
+</table>

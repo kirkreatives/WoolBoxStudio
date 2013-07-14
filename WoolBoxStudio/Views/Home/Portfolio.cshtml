@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WoolBoxStudio.Models.Portfolio>
+
+@{
+    ViewBag.Title = "Portfolio";
+}
+
+<h2>Portfolio Items</h2>
+<p>Here is a look at some of my best work.</p>
+<div id="portfolio">
+    @foreach (var item in Model) {
+        <div class="portfolioItem">
+            <img src="@item.ImageLink" id="@item.PortfolioID" class="moduleImg" alt="@item.Title"/>
+        </div>
+    }
+</div>
+<div id="popup">
+    <a href="javascript:void(0);" class="closeDialog">Close</a>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/jquery.bpopup.min.js" ></script>
+    <script type="text/javascript">
+    $(function () {
+        $('.moduleImg').on('click', function () {
+            $("#popup").bPopup({
+                closeClass: "closeDialog",
+                loadUrl: "PortfolioDetails/" + $(this).attr('id'),
+                contentContainer: "#popup",
+            });
+        }).on('mouseover', function () {
+            $(this).css({
+                'border': '5px solid #e97d37'
+            });
+        }).on('mouseout', function () {
+            $(this).css({
+                'border': '5px solid #f2f2f2'
+            });
+        });
+    });
+    </script>
+}

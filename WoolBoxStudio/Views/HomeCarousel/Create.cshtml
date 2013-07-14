@@ -1,0 +1,40 @@
+﻿@model WoolBoxStudio.Models.HomeCarousel
+
+@{
+    ViewBag.Title = "Create Carousel Item";
+}
+@Html.Partial("_AdminMenu")
+<h2>Create Image Carousel Item</h2>
+
+@using (Html.BeginForm("Create", "HomeCarousel", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ 
+    @Html.ValidationSummary(true)
+
+    <p>
+        @Html.LabelFor(model => model.Description):
+    </p>
+    <p>
+        @Html.EditorFor(model => model.Description)
+        @Html.ValidationMessageFor(model => model.Description)
+    </p>
+    <p>
+        @Html.LabelFor(model => model.ImageLink):
+    </p>
+    
+    <p>
+        <input id="ImageLink" type="file" name="file" />
+        @Html.ValidationMessageFor(model =>model.ImageLink)
+    </p>
+    
+    <p>
+        <input type="submit" value="Create" />
+    </p>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    }

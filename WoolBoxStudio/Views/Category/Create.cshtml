@@ -1,0 +1,31 @@
+﻿@model WoolBoxStudio.Models.Category
+
+@{
+    ViewBag.Title = "Create Category Item";
+}
+@Html.Partial("_AdminMenu")
+<h2>Create Category Item</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <p>
+        @Html.LabelFor(model => model.Name):
+    </p>
+    <p>
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </p>
+    <p>
+        <input type="submit" value="Create" />
+    </p>
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

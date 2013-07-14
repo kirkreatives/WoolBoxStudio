@@ -1,0 +1,367 @@
+﻿/*GENERAL
+ ************************************/
+html {
+    background-color: #f4f2f2;
+    margin: 0 auto;
+    padding: 0;
+    min-width: 1366px;
+    -moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+    font-family: 'Handlee', cursive;
+    color: #333232;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #e97d37;
+    font-weight: normal;
+}
+
+select {
+    font-family: 'Handlee', cursive;
+    padding: 5px;
+    font-size: 1em;
+}
+
+input, textarea {
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    color: #333;
+    font-size: 1.2em;
+    margin: 5px 0 6px 0;
+    padding: 5px;
+    width: 300px;
+    font-family: 'Handlee', cursive;
+}
+
+textarea {
+    font-family: inherit;
+    width: 500px;
+    height: 200px;
+}
+
+input[type="submit"], input[type="button"], button {
+    background-color: #fafafa;
+    border: 1px solid #787878;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 7px 10px;
+    margin-right: 8px;
+    width: auto;
+}
+    input[type="submit"]:hover, input[type="button"]:hover, button:hover {
+        background-color: #ebebeb;
+    }
+    input[type="submit"]:active, input[type="button"]:active, button:active {
+        background-color: #d5d5d5;
+    }
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+.field-validation-error {
+    color: red;
+}
+
+/*HEADER
+ ************************************/
+header {
+    background-color: #f4f2f2;
+    padding: 5px;
+}
+#headerContent {
+    width: 1366px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+    #headerContent img {
+        float: left;
+        width: 100px;
+        margin: 5px;
+    }
+    #headerContent h1 {
+        width: 600px;
+        float: left;
+    }
+        #headerContent h1 a {
+            color: #333232;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin-left: 20px;
+            width: 500px;
+        }
+    #socialMedia img {
+        float: right;
+        width: 40px;
+        padding-top: 30px;
+    }
+
+    #loginInfo {
+        clear: both;
+        overflow: hidden;
+    }
+        #loginInfo a {
+            text-decoration: none;
+            color: #333232;
+        }
+            #loginInfo a:hover {
+                text-decoration: underline;
+            }
+        #loginInfo form {
+            float: left;
+            margin-left: 10px;
+        }
+        #loginInfo #loginWelcome {
+            float: left;
+        }
+
+/*MAIN NAV
+************************************/
+#mainNav {
+    background-color: #e97d37;
+    font-family: 'Handlee', cursive; 
+    margin-bottom: 10px;
+
+}
+    #mainNav ul li:hover > ul {
+        display: block;
+    }
+    #mainNav ul {
+        padding: 0 20px; 
+        list-style: none;
+        position: relative;
+        font-size: 1.3em;
+        margin: 0 auto;
+        width: 800px;
+    }
+        #mainNav ul:after {
+            content: ""; 
+            clear: both; 
+            display: block;
+        }
+        #mainNav ul li {
+            float: left;
+        }
+            #mainNav ul li a {
+                display: block; 
+                margin: 10px;
+                color: #fafafa;
+                text-decoration: none;
+            }
+                #mainNav ul li a:hover {
+                    text-decoration: underline;
+                }
+    #mainNav ul ul {
+        display: none;
+        background-color: #fb9859;
+        padding: 0;
+        position: absolute; top: 100%;
+        font-size: 0.8em;
+        z-index:999;
+        width: 110px;
+    }
+        #mainNav ul ul li {
+            float: none; 
+            position: relative;
+        }
+            #mainNav ul ul li a {
+                text-decoration: none;
+            }   
+            #mainNav ul ul li a:hover {
+                text-decoration: underline;
+            }
+
+
+/*ADMIN NAV
+ ************************************/
+#adminNav {
+    float: left;
+    margin-right: 20px;
+    height: 1000px;
+}
+#adminNav ul {
+    list-style-type: none;
+    padding-right: 10px;
+    border-right: 1px solid #161616;
+}
+    #adminNav ul li {
+        margin: 0 0 2px 0;
+    }
+    #adminNav a:link {
+        color: #161616;
+        text-decoration: none;
+    }
+    #adminNav a:visited {
+        color: #161616;
+    }
+    #adminNav a:hover {
+        text-decoration: underline;   
+    }
+    #adminNav a:active {
+        text-decoration: underline;   
+    }
+
+/*BODY
+ ************************************/
+#body {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*FOOTER
+ ************************************/
+footer {
+    margin-top: 20px;
+    clear: both;
+    text-align: center;
+    font-size: 1em;
+    border-top: 2px solid #e97d37;
+}
+
+/*HOMEPAGE
+ ************************************/
+#modules {
+    padding-top: 70px;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    clear: both;
+}
+.module {
+    width: 30%;
+    float: left; 
+    margin: 20px;
+}
+	
+.innerModule {
+    width: 95%;
+    margin: auto;
+    line-height: 1.3;
+}
+    .innerModule img {
+        display: block;
+        margin: 0 auto;
+    }
+    .innerModule h2 {
+        text-align:center;
+        font-size: 2em;
+    }
+
+/*PORTFOLIO PAGE
+ ************************************/
+#portfolio {
+    overflow: hidden;
+    -moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+.portfolioItem {
+    -moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+    width: 23%;
+    height: 200px;
+    float: left;
+    margin: 10px;
+}
+    .portfolioItem img {
+        -moz-box-sizing: border-box; 
+	    -webkit-box-sizing: border-box; 
+	    box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border: 5px solid #f2f2f2;
+        cursor: pointer;
+    }
+
+#popup {
+	border: 2px solid black;
+	background-color: #fff;
+	position: absolute;
+	z-index: 9999;
+	opacity: 0;
+	display: none;
+	padding: 50px;
+}
+    #popup img {
+        width: 1000px;
+        height: 400px;
+    }
+
+.closeDialog {
+    position: relative;
+    float: right;
+}
+
+/*CRAFT SHOWS
+ ***********************************/
+.craftShow {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+    .craftShowInfo {
+        float: left;
+        width: 45%;
+    }
+    .craftShow img {
+        float: right;
+        width: 50%
+    }
+
+/*LOCATIONS
+ ***********************************/
+.location {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+    .locationInfo {
+        float: left;
+        width: 45%;
+    }
+    .location img {
+        float: right;
+        width: 50%
+    }
+
+/*ABOUT/CONTACT
+ ***********************************/
+#aboutSection {
+    overflow: hidden;
+}
+    #aboutSection h2 {
+        font-size: 2em;
+        font-family: 'Handlee', cursive;
+    }
+    #aboutSection p {
+        line-height: 1.5;
+    }
+    #aboutSection img {
+        width: 250px;
+        height: 250px;
+        float: left;
+        margin-right: 15px;
+    }
+
+#contactSection {
+    clear: both;
+    margin-top: 20px;
+}
+    #contactSection h2 {
+        font-size: 2em;
+        font-family: 'Handlee', cursive;
+    }
+
+/*ADMIN AREA
+ ***********************************/
+.adminDetails {
+    width: 500px;
+}
+
