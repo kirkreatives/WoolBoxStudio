@@ -165,7 +165,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
-    <Compile Include="Controllers\CraftShowsController.cs" />
+    <Compile Include="Controllers\CraftShowController.cs" />
     <Compile Include="Controllers\HomeCarouselController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
@@ -323,11 +323,11 @@
     <Content Include="Views\HomeCarousel\Create.cshtml" />
     <Content Include="Views\HomeCarousel\Edit.cshtml" />
     <Content Include="Views\HomeCarousel\Delete.cshtml" />
-    <Content Include="Views\CraftShows\Index.cshtml" />
-    <Content Include="Views\CraftShows\Details.cshtml" />
-    <Content Include="Views\CraftShows\Create.cshtml" />
-    <Content Include="Views\CraftShows\Edit.cshtml" />
-    <Content Include="Views\CraftShows\Delete.cshtml" />
+    <Content Include="Views\CraftShow\Index.cshtml" />
+    <Content Include="Views\CraftShow\Details.cshtml" />
+    <Content Include="Views\CraftShow\Create.cshtml" />
+    <Content Include="Views\CraftShow\Edit.cshtml" />
+    <Content Include="Views\CraftShow\Delete.cshtml" />
     <Content Include="Views\Location\Index.cshtml" />
     <Content Include="Views\Location\Details.cshtml" />
     <Content Include="Views\Location\Create.cshtml" />
