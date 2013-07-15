@@ -1,56 +1,48 @@
-﻿@model WoolBoxStudio.Models.Location
+﻿@model WoolBoxStudio.Models.Location    
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Location Page";
 }
+@Html.Partial("_AdminMenu")
+<h2>Edit Location</h2>
 
-<h2>Edit</h2>
-
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
+@using (Html.BeginForm("Edit", "Location", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>Location</legend>
-
-        @Html.HiddenFor(model => model.LocationID)
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Business)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Business)
-            @Html.ValidationMessageFor(model => model.Business)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.City)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.City)
-            @Html.ValidationMessageFor(model => model.City)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Address)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Address)
-            @Html.ValidationMessageFor(model => model.Address)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.ImageLink)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.ImageLink)
-            @Html.ValidationMessageFor(model => model.ImageLink)
-        </div>
-
-        <p>
-            <input type="submit" value="Save" />
-        </p>
-    </fieldset>
+    @Html.HiddenFor(model => model.LocationID)
+    
+    <p>
+      @Html.LabelFor(model =>model.Business):
+    </p>
+    <p>
+        @Html.EditorFor(model => model.Business)
+        @Html.ValidationMessageFor(model => model.Business)
+    </p>
+   <p>
+      @Html.LabelFor(model =>model.City):
+    </p>
+    <p>
+        @Html.EditorFor(model => model.City)
+        @Html.ValidationMessageFor(model => model.City)
+    </p>
+    <p>
+      @Html.LabelFor(model =>model.Address):
+    </p>
+    <p>
+        @Html.EditorFor(model => model.Address)
+        @Html.ValidationMessageFor(model => model.Address)
+    </p>
+    <p>
+        @Html.LabelFor(model => model.ImageLink):
+    </p>
+    <p>
+    <input id="ImageLink" type="file" name="file" />
+        @Html.ValidationMessageFor(model => model.ImageLink)
+    </p>
+    <p>
+        <input type="submit" value="Save" />
+    </p>
 }
 
 <div>
